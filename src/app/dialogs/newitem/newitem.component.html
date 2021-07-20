@@ -1,0 +1,30 @@
+<mat-form-field appearance="legacy">
+    <mat-label>SKU</mat-label>
+    <input matInput [(ngModel)]="item.sku" placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="legacy">
+    <mat-label>Producto</mat-label>
+    <input matInput [(ngModel)]="item.nombre" placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="legacy">
+    <mat-label>Cantidad</mat-label>
+    <input matInput [(ngModel)]="item.cantidad" placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="legacy">
+    <mat-label>Valor</mat-label>
+    <input matInput  [(ngModel)]="item.valor" placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+</mat-form-field>
+
+
+<button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="AddProduct()">Agregar</button>

@@ -1,0 +1,55 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Productos</h4>
+                        <p class="card-category"> Lista de procutos</p>
+                    </div>
+                    <div class="card-body">
+                        <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="addItem()">Agregar Producto</button>
+
+                        <div class="table-responsive">
+                            <table class="table">
+
+                                <thead class=" text-primary" >
+                                <th>
+                                    Codigo
+                                </th>
+                                <th>
+                                    Cantidad
+                                </th>
+                                <th>
+                                    Producto
+                                </th>
+
+                                <th>
+                                    Valor
+                                </th>
+                                </thead>
+                                <tbody >
+                                <tr *ngFor="let item of lista | async">
+                                    <td>
+                                        {{item.payload.doc.data().sku}}
+                                    </td>
+                                    <td>
+                                        {{item.payload.doc.data().cantidad}}
+                                    </td>
+                                    <td>
+                                        {{item.payload.doc.data().nombre}}
+                                    </td>
+                                    <td class="text-primary">
+                                        {{item.payload.doc.data().valor}}
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
